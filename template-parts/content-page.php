@@ -244,8 +244,13 @@
 						endif;
 					endif;
 					?>
-					<?php if (is_front_page()) : ?>
-					<div class="mdc-layout-grid__cell--span-12" id="about">
+					</div>
+					</div>
+				</div>
+				<?php if(is_front_page()) : ?>
+					<div class="mdc-layout-grid">
+						<div class="mdc-layout-grid__inner">
+				<div class="mdc-layout-grid__cell--span-12" id="about">
 						<div class="about-divider">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850 107">
 								<defs>
@@ -468,9 +473,8 @@
 							</div>
 						</div>
 					</div>
+						</div>
 												<?php endif; ?>
-					</div>
-				</div>
 			</div>
 			<?php if (get_edit_post_link()) : ?>
 				<footer class="entry-footer">
