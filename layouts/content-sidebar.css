@@ -1,0 +1,113 @@
+/*
+ * Theme Name: Alpha Games
+ *
+ * Layout: Content-Sidebar
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.content-area {
+	margin: auto;
+	width: 100%;
+}
+.site-main {
+	margin: 0;
+}
+
+.sidebar-area-left {
+	padding: 72px 0px 8px 8px;
+	max-width: 100%;
+}
+
+.sidebar-area-right {
+	padding: 72px 8px 8px 0px;
+	max-width: 100%;
+}
+
+.widget-card {
+	width: 100%;
+	color: inherit;
+}
+
+.calendar_wrap {
+	color: rgb(255,255,255,0.7);
+	margin-top: 24px;
+	margin-bottom: 0;
+}
+
+#wp-calendar {
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-direction: row;
+}
+
+tbody {
+	flex-direction: column;
+}
+
+li {
+	list-style: none;
+}
+
+@media (min-width: 840px){
+	
+	.site-content .widget-area {
+		margin: auto;
+	}
+}
+@media (max-width:479px){
+	.main-grid-content {
+		order: 1;
+		grid-column-end: span 12;
+	}
+	.sidebar-area-left {
+		order: 2;
+		grid-column-end: span 12;
+		padding: 0;
+	}
+	.sidebar-area-right {
+		order: 3;
+		grid-column-end: span 12;
+		padding: 0;
+	}
+}
+@media (max-width: 839px) and (min-width: 480px){
+	
+	.site-content .widget-area{
+		margin: auto;
+		width: 100%;
+	}
+	.main-grid-content {
+		order: 1;
+		grid-column-end: span 12;
+		padding: 0;
+	}
+	.sidebar-area-left {
+		order: 2;
+		grid-column-end: span 4;
+		padding: 0;
+	}
+	.sidebar-area-right {
+		order: 3;
+		grid-column-end: span 6;
+		padding: 0;
+		align-items: flex-end;
+	}
+}
+
+@media (max-width: 1199px) and (min-width: 840px){
+	.main-grid-content {
+		order: 1;
+		grid-column-end: span 12;
+	}
+	.sidebar-area-left {
+		order: 2;
+		grid-column-end: span 6;
+		padding: 0;
+	}
+	.sidebar-area-right {
+		order: 3;
+		grid-column-end: span 6;
+		padding: 0;
+	}
+}

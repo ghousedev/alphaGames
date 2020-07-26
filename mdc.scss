@@ -1,0 +1,157 @@
+
+// $mdc-theme-primary: midnightblue;
+$mdc-theme-primary: rgb(255, 196, 68);
+$mdc-theme-on-primary: rgba(51, 51, 61, 0.829);
+$mdc-theme-secondary: rgba(241, 165, 78, 0.733);
+$mdc-theme-on-secondary: rgba(17, 14, 14, 0.767);
+$mdc-theme-surface: rgb(58, 58, 70);
+$mdc-theme-on-surface: rgb(248, 211, 164);
+$mdc-theme-background: #33333D;
+$mdc-theme-on-background: rgb(82, 224, 224);
+
+$mdc-typography-font-family: unquote("Cenzil, serif");
+$mdc-typography-font-weight-values: (
+  thin: 200,
+  light: 400,
+  regular: 500,
+  medium: 600,
+  bold: 800,
+  black: 1000
+);
+
+$anchor-color: rgb(248, 237, 134);
+$anchor-visited: rgb(235, 210, 110);
+$anchor-hover: rgb(182, 189, 85);
+
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/chips/mdc-chips";
+@import "@material/dialog/mdc-dialog";
+@import "@material/drawer/mdc-drawer";
+@import "@material/elevation/mdc-elevation";
+@import "@material/fab/mdc-fab";
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/form-field/mdc-form-field";
+@import "@material/grid-list/mdc-grid-list";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/image-list/mdc-image-list";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/line-ripple/mdc-line-ripple";
+@import "@material/linear-progress/mdc-linear-progress";
+@import "@material/list/mdc-list";
+@import "@material/menu/mdc-menu";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/notched-outline/mdc-notched-outline";
+@import "@material/radio/mdc-radio";
+@import "@material/ripple/mdc-ripple";
+@import "@material/select/mdc-select";
+@import "@material/slider/mdc-slider";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/switch/mdc-switch";
+@import "@material/tab/mdc-tab";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/textfield/mdc-text-field";
+@import "@material/theme/mdc-theme";
+@import "@material/toolbar/mdc-toolbar";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
+
+
+@mixin mdc-card-outline($color, $thickness){
+  border-color: $color;
+  border-width: $thickness;
+}
+
+@mixin mdc-card-shape-radius($radius, $rtl-reflexive){
+  border-radius: $radius;
+}
+
+.mdc-card {
+  @include mdc-card-outline( $mdc-theme-secondary , 2px );
+  @include mdc-card-shape-radius(20px, false);
+}
+
+@mixin mdc-button-shape-radius($radius, $rtl-reflexive){
+  border-radius: $radius;
+}
+
+.mdc-button {
+  @include mdc-button-shape-radius(10px, false)
+}
+
+@mixin mdc-drawer-border-color($color){
+ border-right-color: $color;
+}
+
+.mdc-drawer {
+  @include mdc-drawer-border-color($mdc-theme-primary);
+}
+
+.post-card {
+    width: auto;
+    margin: auto;
+  }
+  
+  .post-card__primary {
+    padding: 1rem;
+  }
+  
+  .post-card__title {
+    margin: auto;
+  }
+  
+  .post-card__subtitle {
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    margin: 0;
+  }
+  
+  .post-card__secondary {
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    padding: 0 1rem 8px 1rem;
+  }
+
+  #comments .mdc-card #respond #reply-title .comment-reply-title{
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    margin: 0;
+  }
+
+  #commentform > p.comment-notes {
+    color: rgba(0, 0, 0, 0.54);
+    /* @alternate */
+    color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54));
+    padding: 0 1rem 8px 1rem;
+  }
+
+  a {
+    color: $anchor-color;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: $anchor-visited;
+  }
+  
+  a:hover, a:focus, a:active {
+    color: $anchor-hover;
+  }
+  
+  a:focus {
+    outline: thin dotted;
+  }
+  
+  a:hover, a:active {
+    outline: 0;
+  }
+
+  .comment-button {
+    display: none;
+  }
