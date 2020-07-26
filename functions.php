@@ -100,6 +100,7 @@ function alphagames_content_width()
 }
 add_action('after_setup_theme', 'alphagames_content_width', 0);
 
+// Custom search form
 function my_search_form($form)
 {
 	$form = '<form role="search" method="get" id="searchform" class="mdc-form-field mdc-typography" action="' . home_url('/') . '" >
@@ -120,6 +121,7 @@ function my_search_form($form)
 	return $form;
 }
 
+// Pagination for posts
 function alpha_pagination($pages = '', $range = 5)
 {
 	$showitems = ($range * 2) + 1;
@@ -170,6 +172,8 @@ function my_change_sort_order($query)
 	endif;
 	wp_reset_postdata();
 };
+
+// Order the facebook events on the front page
 function front_page_order($query)
 {
 	if (is_front_page()) :
@@ -180,6 +184,8 @@ function front_page_order($query)
 	wp_reset_postdata();
 };
 add_action('pre_get_posts', 'front_page_order');
+
+// Move events to "previous events" category once the start time of the even has passed
 function previous_events_autofill()
 {
 	$args = array(

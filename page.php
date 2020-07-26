@@ -19,9 +19,7 @@ get_header();
 	<div class="mdc-layout-grid main-grid">
 		<div class="mdc-layout-grid__inner">
 			<div class="mdc-layout-grid__cell--span-2 mdc-layout-grid__cell--order-1 sidebar-area-left">
-				<?php
-				get_sidebar('left');
-				?>
+				
 			</div>
 			<div class="mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--order-2 main-grid-content search-page-grid">
 				<main id="main" class="site-main">
@@ -38,9 +36,7 @@ get_header();
 				</main><!-- #main -->
 			
 			<div class="mdc-layout-grid__cell--span-2 mdc-layout-grid__cell--order-3 sidebar-area-right mdc-typography">
-				<?php
-				get_sidebar('right');
-				?>
+				
 			</div>
 		</div>
 	</div>
